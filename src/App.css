@@ -12,7 +12,7 @@ body {
 }
 
 .loading-screen, .hero-section, .services, .about-us, .enquiry-form {
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,6 +20,7 @@ body {
   padding: 20px;
   box-sizing: border-box;
 }
+
 
 button {
   background-color: var(--accent);
