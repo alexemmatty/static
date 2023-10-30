@@ -4,6 +4,12 @@
   --accent: #a183e7;
   --background: #fbf9ff;
 }
+.App {
+  width: 100vw; /* Set the width to 100% of the viewport width */
+}
+html, body {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
 
 body {
   background-color: var(--background);
@@ -12,6 +18,7 @@ body {
 }
 
 .loading-screen, .hero-section, .services, .about-us, .enquiry-form {
+  width: 100vw; /* Set the width to 100% of the viewport width */
   height: calc(var(--vh, 1vh) * 100);
   display: flex;
   flex-direction: column;
