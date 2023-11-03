@@ -1,5 +1,29 @@
 import React from "react";
 import "../style/Services.css";
+import { Card, Container, Row, Col } from 'react-bootstrap';
+import servicesData from '../assets/data/services.json';
+
+// function Services() {
+//     return (
+//         <Container id="services">
+//             <Row>
+//                 {servicesData.map(service => (
+//                     <Col key={service.id} md={6}>
+//                         <Card>
+//                             <Card.Body>
+//                                 <Card.Title>{service.title}</Card.Title>
+//                                 <Card.Text>{service.description}</Card.Text>
+//                             </Card.Body>
+//                         </Card>
+//                     </Col>
+//                 ))}
+//             </Row>
+//         </Container>
+//     );
+// }
+
+// export default Services;
+
 
 function Services() {
 

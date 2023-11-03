@@ -1,27 +1,39 @@
-import React, { useEffect } from "react";
-import "../style/HeroSection.css";
+import React from 'react';
+import { Carousel, Button, Container, Row, Col } from 'react-bootstrap';
+import '../style/HeroSection.css';
+import Image1 from '../assets/images/c2.png'; // Importing the image
+import Image2 from '../assets/images/c1.png';
 
 function HeroSection() {
-  useEffect(() => {
-    // Load the Spline script dynamically
-    const script = document.createElement("script");
-    script.src =
-      "https://unpkg.com/@splinetool/viewer@0.9.490/build/spline-viewer.js";
-    script.type = "module";
-    document.body.appendChild(script);
-
-    // Clean up on component unmount
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
-
-  return (
-    <div className="hero">
-      <div className="overlay"></div>
-      <spline-viewer url="https://prod.spline.design/aYX6mk5TVfwhdIRX/scene.splinecode"></spline-viewer>
-    </div>
-  );
+    return (
+        <div className="hero-section">
+            <Carousel>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100"
+                        src={Image1} // Using the imported image
+                        alt="First slide"
+                    />
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100"
+                        src={Image2}
+                        alt="Second slide"
+                    />
+                </Carousel.Item>
+                {/* Add more carousel items if needed */}
+            </Carousel>
+            <Container className="overlay-content">
+                <Row>
+                    <Col xs={12} className="text-center">
+                        <h1>We bring the next step to your brands.</h1>
+                        <Button style={{ backgroundColor: '#27096d', borderColor: '#27096d' }}>Get Started</Button>
+                    </Col>
+                </Row>
+            </Container>
+        </div>
+    );
 }
 
 export default HeroSection;

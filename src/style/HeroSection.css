@@ -1,18 +1,24 @@
-/* In HeroSection.css */
-
-.hero {
+.hero-section {
     position: relative;
-    width: 100%;  /* Adjust as needed */
-    height: 100vh;  /* Adjust as needed */
+    color: #fbf9ff; /* Setting text color as one of the theme colors */
 }
 
-.overlay {
+.overlay-content {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 10;
-    cursor: default;
-    background: rgba(0, 0, 0, 0), 0.5);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.carousel-item img {
+    height: 65vh; /* Set the height to 65% of the viewport height */
+    object-fit: cover; /* Ensure images cover the set height */
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    h1 {
+        font-size: 1.5rem;
+    }
 }

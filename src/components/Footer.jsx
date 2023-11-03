@@ -4,10 +4,11 @@ import '../style/Footer.css';
 function Footer() {
     return (
         <footer>
-            <p>© 2023 nxtep. All rights reserved.</p>
-            {/* Add quick links and social media icons */}
+            <p>Contact Us: email@nxtep.com</p>
+            <p>Follow us on social media: [social media links]</p>
         </footer>
     );
 }
 
 export default Footer;
+

@@ -1,13 +1,13 @@
-import React from 'react';
-import '../style/AboutUs.css';
+import React from "react";
+import "../style/AboutUs.css";
 
 function AboutUs() {
-    return (
-        <div className="about-us">
-            <h2>About Us</h2>
-            <p>Our mission, vision, and dedicated team.</p>
-        </div>
-    );
+  return (
+      <div className="about-us text-center">
+          <h2 className="mb-4">About Us</h2>
+          <p>Our mission, vision, and dedicated team.</p>
+      </div>
+  );
 }
 
 export default AboutUs;
