@@ -1,0 +1,31 @@
+[
+    {
+      "id": 1,
+      "title": "Web Development",
+      "image": "../assets/img/web.png",
+      "alt": "Web Development",
+      "description": "We are a team"
+    },
+    {
+      "id": 2,
+      "title": "Branding",
+      "image": "../assets/img/web.png",
+      "alt": "Branding",
+      "description": "We are a team"
+    },
+    {
+      "id": 3,
+      "title": "Creative Design",
+      "image": "../assets/img/web.png",
+      "alt": "Creative Design",
+      "description": "We are a team"
+    },
+    {
+      "id": 4,
+      "title": "Social Media Marketing",
+      "image": "../assets/img/web.png",
+      "alt": "Social Media Marketing",
+      "description": "We are a team"
+    }
+  ]
+  
