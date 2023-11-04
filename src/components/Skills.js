@@ -1,9 +1,8 @@
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import colorSharp from "../assets/img/color-sharp.png";
-import services from '../data/services.json'; // Import the JSON data
-import '../styles/service.css'; // Make sure you create this CSS file
-import image from '../assets/img/web.png';
+import services from '../data/services.js'; // Import the JSON data
+import '../styles/service.css';
 
 export const Skills = () => {
   const responsive = {
@@ -33,19 +32,19 @@ export const Skills = () => {
           <div className="col-12">
             <div className="skill-bx wow zoomIn">
               <h2>Our Services</h2>
-              <p>Our humble Services include:</p>
-              <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
-                {services.map((service) => (
-                  <article class="card">
-                  <div class="temporary_text">
-                  <img src={service.image} alt={service.alt} className="service-image" />
-                  </div>
-              <div class="card_content">
-                  <span class="card_title"><h5>{service.title}</h5></span>
-                      <span class="card_subtitle">{service.description}</span>    
-              </div>
-              </article>
-              ))}
+              <Carousel responsive={responsive} infinite={true} autoPlay={true} autoPlaySpeed={2000} className="owl-carousel owl-theme auto-slider">
+                {services.map((service, index) => (
+                  <a href={service.redirect}  rel="noopener noreferrer" key={index} className="service-link">
+                    <div className="e-card playing">
+                      <div className="image">
+                        <img src={service.image} alt={service.alt} className="service-image" />
+                      </div>
+                      <div className="infotop">
+                        {service.title}
+                      </div>
+                    </div>
+                  </a>
+                ))}
               </Carousel>
             </div>
           </div>
