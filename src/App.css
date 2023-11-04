@@ -617,3 +617,25 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.5px;
   margin-top: 20px;
 }
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+.brand-name {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  font-weight: 700; /* This makes the font bold */
+  /* Additional styling can go here */
+  letter-spacing: 2.5px; /* This adds 50 pixels of spacing between each letter */
+
+}
+
+.brand-name .brand-x {
+  display: inline-block; /* This allows the rotation to happen on the inline element */
+  transition: transform 0.6s ease-in-out;
+  /* Additional styling for the 'X' can go here */
+}
+
+.brand-name .brand-x:hover {
+  transform: rotate(360deg); /* This rotates the 'X' on hover */
+}
