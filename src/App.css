@@ -89,7 +89,7 @@ nav.navbar {
   top: 0;
   z-index: 9999;
   transition:  0.32s ease-in-out;
-  background-color: #27096d; /* Updated navbar background color */
+  background-color: #27096d76; /* Updated navbar background color */
 }
 nav.navbar.scrolled {
   padding: 0px 0;
