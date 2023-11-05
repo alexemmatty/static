@@ -6,6 +6,7 @@ import { Banner } from "./components/Banner";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import { About } from './components/AboutUs';
+import { Route } from 'react-router-dom';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Contact />
       <Footer />
     </div>
+    
   );
 }
 
