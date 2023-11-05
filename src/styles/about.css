@@ -1,4 +1,46 @@
-.img-fluid{
-    width: 200px;
-    height: 200px;
+/* CSS in about.css */
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
 }
+  
+.about-section {
+    position: relative; /* Ensure the section is relative for z-index to work */
+    padding-top: 4rem; /* Adjust top padding to make space for overlapping */
+    padding-bottom: 4rem; /* Adjust bottom padding as per your design requirements */
+}
+
+/* Assuming your Services component has a class .services-section */
+.services-section {
+    position: relative; /* Position relative to enable z-index */
+    z-index: 10; /* Higher z-index to ensure it's above the About section */
+    margin-bottom: -50%; /* Half of the height of the Services component */
+}
+
+.text-part h1 {
+    font-size: 4rem; /* Large font size for 'We're Scoda Agency' */
+    font-weight: 700; /* Bold font weight */
+    margin-bottom: 1rem; /* Space between the title and description */
+}
+  
+.text-part .highlight {
+    color: #FF0000; /* Red color for 'Scoda Agency' */
+}
+  
+.text-part .description {
+    font-size: 1.25rem; /* Larger font size for description to match design */
+    color: #333; /* Adjust color to fit your design */
+    line-height: 1.5; /* For better readability */
+}
+  
+.image-part {
+    text-align: center; /* Center the image if necessary */
+}
+  
+.animate__zoomIn {
+    animation-duration: 1s; /* Customize the duration of the animation */
+    animation-fill-mode: both; /* Maintain the end state after animation */
+}
+
+/* Ensure the .services-section is directly above the .about-section in your HTML */
