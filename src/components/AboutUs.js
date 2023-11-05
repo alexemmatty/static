@@ -16,20 +16,20 @@ function About() {
         <Container>
           <TrackVisibility once partialVisibility>
             {({ isVisible }) => (
-              <Row className="align-items-center">
+              <Row className="align-items-center justify-content-center"> {/* Center the content horizontally */}
                 <Col lg={6} md={12} className="text-part">
                   <h1>We're <span className="highlight">Scoda Agency</span></h1>
                   <p className="description">
                     We are a fully in-house digital agency focusing on branding, marketing, web design and development with clients ranging from start-ups. We pride ourselves on partnering with clients in order to give the most transparent and educational experience.
                   </p>
                 </Col>
-                <Col lg={6} md={12} className="image-part d-none d-lg-block">
-                  <img
-                    src={creativeImage}
-                    alt="Creative Space"
-                    className={`img-fluid ${isVisible ? 'animate__animated animate__zoomIn' : ''}`}
-                  />
-                </Col>
+                  <Col lg={6} md={12} className="image-part d-none d-lg-block">
+                    <img
+                      src={creativeImage}
+                      alt="Creative Space"
+                      className={`img-fluid ${isVisible ? 'animate__animated animate__zoomIn' : ''}`}
+                    />
+                  </Col>
               </Row>
             )}
           </TrackVisibility>
