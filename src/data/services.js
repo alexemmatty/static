@@ -5,11 +5,11 @@
  const services = [
     {
       "id": 1,
-      "title": "Web Development",
+      "title": "WebDevelopment",
       "image": web,
-      "alt": "Web Development",
+      "alt": "WebDevelopment",
       "description": "We are a team",
-      "redirect": "https://www.google.com"
+      "redirect": `/ServiceDetail/WebDevelopment`
     },
     {
       "id": 2,
