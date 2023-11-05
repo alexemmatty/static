@@ -55,8 +55,8 @@ function Banner  () {
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <span className="tagline">Your brands Next step </span>
-                <h1>{`Hi! We're Nxtep, your creative nexus for `} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
+                <span className="tagline">Next step for your brands </span>
+                <h1>{`Hi! We're Nxtep, your creative nexus for `} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Branding", "Social Media","Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
                   <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
               </div>}
             </TrackVisibility>
