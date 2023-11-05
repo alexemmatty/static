@@ -1,12 +1,12 @@
+// App.js
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { NavBar } from "./components/NavBar";
 import { Banner } from "./components/Banner";
-
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import { About } from './components/AboutUs';
-import { Route } from 'react-router-dom';
+import React from "react";
 
 function App() {
   return (
@@ -17,7 +17,6 @@ function App() {
       <Contact />
       <Footer />
     </div>
-    
   );
 }
 
