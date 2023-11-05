@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row, Col, Tab, Nav } from 'react-bootstrap';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
-import Service from './Service';
+import { Services } from './Service';
 import '../styles/about.css';
 import image from '../assets/img/bd.png';
 const AboutSectionHeader = ({ isVisible }) => (
@@ -20,11 +20,11 @@ const AboutTabContent = ({ eventKey, isVisible, children }) => (
   </Tab.Pane>
 );
 
-export const About = () => {
+function About () {
   return (
     <section className="about-section" id="about">
       <Container>
-        <Service />
+        <Services />
         <Row className="justify-content-center text-center">
         <div className="d-flex flex-row justify-content-center align-items-center">
         <div className="p-2">
@@ -40,3 +40,5 @@ export const About = () => {
     </section>
   );
 };
+
+export default About;
