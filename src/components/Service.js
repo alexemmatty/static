@@ -4,7 +4,7 @@ import colorSharp from "../assets/img/color-sharp.png";
 import services from '../data/services.js'; // Import the JSON data
 import '../styles/service.css';
 
-export const Skills = () => {
+export const Service = () => {
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -26,11 +26,11 @@ export const Skills = () => {
   };
 
   return (
-    <section className="skill" id="skills">
+    <section className="service" id="service">
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <div className="skill-bx wow zoomIn">
+            <div className="service-bx wow zoomIn">
               <h2>Our Services</h2>
               <Carousel responsive={responsive} infinite={true} autoPlay={true} autoPlaySpeed={2000} className="owl-carousel owl-theme auto-slider">
                 {services.map((service, index) => (
@@ -50,9 +50,8 @@ export const Skills = () => {
           </div>
         </div>
       </div>
-      <img className="background-image-left" src={colorSharp} alt="Decorative background" />
     </section>
   );
 };
 
-export default Skills;
+export default Service;
