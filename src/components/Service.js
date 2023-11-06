@@ -24,9 +24,6 @@ export const Services = () => {
     },
   };
 
-  const handleServiceClick = (service) => {
-    window.open(service.redirect, '_blank'); // Open the link in a new window or tab
-  };
 
   return (
     <section className="service" id="service">
@@ -44,7 +41,7 @@ export const Services = () => {
               >
                 {services.map((service, index) => (
                   <div
-                    onClick={() => handleServiceClick(service)}
+                    
                     key={index}
                     className="service-link"
                   >
