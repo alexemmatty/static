@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../assets/img/header-img.svg";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
@@ -52,22 +52,28 @@ function Banner  () {
       <Container>
         <Row className="aligh-items-center">
           <Col xs={12} md={6} xl={7}>
+            {/* TrackVisibility for the content */}
             <TrackVisibility>
-              {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <span className="tagline">Next step for your brands </span>
-                <h1>{`Hi! We're Nxtep, your creative nexus for `} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Branding", "Social Media","Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
+              {({ isVisible }) => (
+                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                  <span className="tagline">Next step for your brands </span>
+                  <h1>{`Hi! We're Nxtep, your creative nexus for `} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Branding", "Social Media","Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
                   <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
-              </div>}
+                </div>
+              )}
             </TrackVisibility>
           </Col>
           <Col xs={12} md={6} xl={5}>
-          <TrackVisibility>
-              {({ isVisible }) =>
-                <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                  <img src={headerImg} alt="Header Img"/>
-                </div>}
-            </TrackVisibility>
+            {/* Conditional rendering of TrackVisibility for the image */}
+            {window.innerWidth >= 768 && (
+              <TrackVisibility>
+                {({ isVisible }) => (
+                  <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
+                    <img src={headerImg} alt="Header Img" />
+                  </div>
+                )}
+              </TrackVisibility>
+            )}
           </Col>
         </Row>
       </Container>

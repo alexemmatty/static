@@ -232,6 +232,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 /************ Banner Css ************/
+/* Default styles for .banner */
 .banner {
   margin-top: 0;
   padding: 260px 0 100px 0;
@@ -240,6 +241,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+/* Media query for screens with a maximum width of 768px (mobile view) */
+@media (max-width: 768px) {
+  .banner {
+    padding: 100px 0 100px 0;
+  }
+}
+
 .banner .tagline {
   font-weight: 700;
   letter-spacing: 0.8px;
