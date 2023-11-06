@@ -91,13 +91,13 @@
         font-size: 1rem; /* Smaller font size for description */
     }
     .text-part .padding1 {
-        padding-left: 160px; /* Center the text on mobile view */
+        padding-left: 165px; /* Center the text on mobile view */
     }
     .text-part .padding2 {
-        padding-left: 168px; /* Center the text on mobile view */
+        padding-left: 175px; /* Center the text on mobile view */
     }
     .text-part .padding3 {
-        padding-left: 175px; /* Center the text on mobile view */
+        padding-left: 182px; /* Center the text on mobile view */
     }
 }
 
@@ -106,7 +106,7 @@
 
     .text-part h1 {
         font-size: 2rem; /* Further reduce font size for smaller screens */
-        padding-left: 30px; /* Adjust padding */
+        padding-left: 40px; /* Adjust padding */
     }
 
     .text-part .description {
