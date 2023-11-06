@@ -3,7 +3,6 @@ import { Container, Row, Col } from 'react-bootstrap';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import '../styles/about.css';
-import creativeImage from '../assets/img/bd.png';
 
 // Import your Services component
 import { Services } from './Service'; // Assuming the default export is used
