@@ -16,20 +16,38 @@ function About() {
         <Container>
           <TrackVisibility once partialVisibility>
             {({ isVisible }) => (
-              <Row className="align-items-center justify-content-center"> {/* Center the content horizontally */}
-                <Col lg={6} md={12} className="text-part">
-                  <h1>We're <span className="highlight">Scoda Agency</span></h1>
-                  <p className="description">
-                    We are a fully in-house digital agency focusing on branding, marketing, web design and development with clients ranging from start-ups. We pride ourselves on partnering with clients in order to give the most transparent and educational experience.
+              <Row className="align-items-center justify-content-center"> 
+                <Col lg={7} md={12} className="text-part">
+                  <h1 className="single-line-heading">Your <span className="highlight">Global Guidance</span></h1>
+                  <p className="description text-center">
+                    Welcome to NXTEP, where the future of digital marketing unfolds before your eyes. We're a passionate team of enthusiasts on a mission to redefine the digital landscape. Our journey began with a promise – a promise to deliver innovative, effective, and forward-thinking digital marketing solutions that empower businesses like yours to thrive in the online world.
                   </p>
+                  
+                  {/* Three lists for Mission, Vision, and Goal */} 
+                  <Row className="list justify-content-center">
+                    <Col md={4}>
+                      <h3 className='padding1'>Mission</h3>
+                      <ul className="text-left1">
+                        Crafting digital success
+                        {/* Add more list items as needed */}
+                      </ul>
+                    </Col>
+                    <Col md={4}>
+                      <h3 className='padding2'>Vision</h3>
+                      <ul className="text-left2">
+                        Your Success, Our Priority
+                        {/* Add more list items as needed */}
+                      </ul>
+                    </Col>
+                    <Col md={4}>
+                      <h3 className='padding3'>Goal</h3>
+                      <ul className="text-left3">
+                    Engage, Analyse, Grow
+                        {/* Add more list items as needed */}
+                      </ul>
+                    </Col>
+                  </Row>
                 </Col>
-                  <Col lg={6} md={12} className="image-part d-none d-lg-block">
-                    <img
-                      src={creativeImage}
-                      alt="Creative Space"
-                      className={`img-fluid ${isVisible ? 'animate__animated animate__zoomIn' : ''}`}
-                    />
-                  </Col>
               </Row>
             )}
           </TrackVisibility>
