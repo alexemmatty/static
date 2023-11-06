@@ -22,16 +22,44 @@
     font-size: 4rem; /* Large font size for 'We're Scoda Agency' */
     font-weight: 700; /* Bold font weight */
     margin-bottom: 1rem; /* Space between the title and description */
+    padding-left: 45px;
 }
+.single-line-heading {
+    white-space: nowrap;
+  }
+  
   
 .text-part .highlight {
-    color: #FF0000; /* Red color for 'Scoda Agency' */
+    color: #a183e7; /* Red color for 'Scoda Agency' */
+}
+.text-part .list{
+    padding-top: 30px;
+    padding-right: 20px;
+}
+.text-part .text-left1{
+    text-align: center;
+}
+.text-part .text-left2{
+    text-align: center;
+}
+.text-part .text-left3{
+    text-align: center;
+}
+.text-part .padding1{
+    padding-left: 72.5px;
+}
+.text-part .padding2{
+    padding-left: 85px;
+}
+.text-part .padding3{
+    padding-left: 91px;
 }
   
 .text-part .description {
     font-size: 1.25rem; /* Larger font size for description to match design */
-    color: #333; /* Adjust color to fit your design */
+    color: #ffffff; /* Adjust color to fit your design */
     line-height: 1.5; /* For better readability */
+    
 }
   
 .image-part {
@@ -41,6 +69,5 @@
 .animate__zoomIn {
     animation-duration: 1s; /* Customize the duration of the animation */
     animation-fill-mode: both; /* Maintain the end state after animation */
-}
-
+}       
 /* Ensure the .services-section is directly above the .about-section in your HTML */
