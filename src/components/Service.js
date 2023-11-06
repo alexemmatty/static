@@ -4,7 +4,7 @@ import 'react-multi-carousel/lib/styles.css';
 import services from '../data/services'; // Import the JSON data
 import '../styles/service.css';
 
-export const Services = () =>{
+export const Services = () => {
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
@@ -68,4 +68,3 @@ export const Services = () =>{
     </section>
   );
 };
-

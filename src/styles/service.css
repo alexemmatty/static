@@ -85,4 +85,18 @@
   100% {
     transform: rotate(360deg);
   }
+}/* Add this to your existing CSS */
+
+/* Mobile */
+@media (max-width: 464px) {
+  .e-card {
+    width: 100%; /* Adjust the width as needed for mobile */
+    height: auto; /* Make the height auto for responsive scaling */
+    margin: 10px 0;
+  }
+  .infotop {
+    font-size: 16px; /* Adjust the font size for mobile */
+    top: 3em;
+  }
+  /* Add any other mobile-specific styles here */
 }
