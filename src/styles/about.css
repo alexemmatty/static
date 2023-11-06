@@ -84,7 +84,7 @@
 
     .text-part h1 {
         font-size: 3rem; /* Reduce font size for smaller screens */
-        padding-left: 30px; /* Adjust padding */
+        padding-left: 20px; /* Adjust padding */
     }
 
     .text-part .description {
@@ -106,11 +106,14 @@
 
     .text-part h1 {
         font-size: 2rem; /* Further reduce font size for smaller screens */
-        padding-left: 20px; /* Adjust padding */
+        padding-left: 30px; /* Adjust padding */
     }
 
     .text-part .description {
         font-size: 0.9rem; /* Smaller font size for description */
+    }
+    .text-part .description {
+        font-size: 1rem; /* Smaller font size for description */
     }
 
     /* You can add more specific adjustments for smaller screens here */
