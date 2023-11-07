@@ -77,13 +77,14 @@ function Contact() {
                     <textarea rows="6" value={formDetails.message} placeholder="Message" onChange={(e) => onFormUpdate('message', e.target.value)}></textarea>
                     <button type="submit"><span>{buttonText}</span></button>
                   </Col>
-                  {
+                  
+                </Row>
+                {
                     status.message &&
                     <Col>
                       <p className={status.success === false ? "text-danger" : "text-success"}>{status.message}</p>
                     </Col>
                   }
-                </Row>
               </form>
             </div>
           </Col>

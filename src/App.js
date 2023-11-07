@@ -7,6 +7,7 @@ import Contact  from "./components/Contact";
 import  Footer  from "./components/Footer";
 import About  from './components/AboutUs';
 import React from "react";
+import Projects from './components/Projects';
 
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
@@ -32,6 +33,7 @@ function App() {
       <Banner />
       <About />
       <Contact />
+      <Projects />
       <Footer />
     </div>
   );
