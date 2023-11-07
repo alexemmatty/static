@@ -4,6 +4,7 @@ import "animate.css";
 import TrackVisibility from "react-on-screen";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 import contactImg from "../assets/img/header-img.png";
+import "../styles/contact.css";
 
 function Contact() {
   const formInitialDetails = {

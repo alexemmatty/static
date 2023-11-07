@@ -7,7 +7,7 @@ import Contact  from "./components/Contact";
 import  Footer  from "./components/Footer";
 import About  from './components/AboutUs';
 import React from "react";
-import Service2 from './components/Service2';
+import Service from './components/Services';
 
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
@@ -32,7 +32,7 @@ function App() {
       <NavBar />
       <Banner />
       <About />
-      <Service2 />
+      <Service />
       <Contact />
       
       <Footer />

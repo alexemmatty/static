@@ -4,6 +4,7 @@ import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
 import { HashLink } from 'react-router-hash-link';
+import '../styles/NavBar.css';
 import {
   BrowserRouter as Router
 } from "react-router-dom";
@@ -51,8 +52,8 @@ function NavBar() {
             <span className="navbar-text">
               <div className="social-icon">
                 <a href="#"><img src={navIcon1} alt="" /></a>
-                <a href="#"><img src={navIcon2} alt="" /></a>
-                <a href="#"><img src={navIcon3} alt="" /></a>
+                <a href="https://www.facebook.com/Nxtep.in/"><img src={navIcon2} alt="Icon" /></a>
+                <a href="https://www.instagram.com/nxtep.in/"><img src={navIcon3} alt="Icon" /></a>
               </div>
               <HashLink to='#connect'>
                 <button className="vvd"><span>Get in touch</span></button>
