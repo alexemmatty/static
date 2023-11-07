@@ -7,7 +7,7 @@ import Contact  from "./components/Contact";
 import  Footer  from "./components/Footer";
 import About  from './components/AboutUs';
 import React from "react";
-import Projects from './components/Projects';
+import Service2 from './components/Service2';
 
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
@@ -32,8 +32,9 @@ function App() {
       <NavBar />
       <Banner />
       <About />
+      <Service2 />
       <Contact />
-      <Projects />
+      
       <Footer />
     </div>
   );
