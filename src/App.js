@@ -29,13 +29,11 @@ const analytics = getAnalytics(app);
 function App() {
   return (
     <div className="App">
-      <NavBar />
       <Banner />
       <About />
       <Service />
       <Contact />
       
-      <Footer />
     </div>
   );
 }

@@ -21,7 +21,7 @@
     },
     {
       "id": 3,
-      "title": "Graphics Designing",
+      "title": "GraphicsDesigning",
       "image": design,
       "alt": "Creative Design",
       "description": "We are a team",

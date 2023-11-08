@@ -1,8 +1,9 @@
-import React from 'react';
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
-import services from '../data/services'; // Import the JSON data
-import '../styles/service.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+import services from "../data/services"; // Import the JSON data
+import "../styles/service.css";
 
 export const Services = () => {
   const responsive = {
@@ -24,7 +25,6 @@ export const Services = () => {
     },
   };
 
-
   return (
     <section className="service" id="service">
       <div className="container">
@@ -39,22 +39,14 @@ export const Services = () => {
                 autoPlaySpeed={2000}
                 className="owl-carousel owl-theme auto-slider"
               >
-                {services.map((service, index) => (
-                  <div
-                    
-                    key={index}
-                    className="service-link"
-                  >
-                    <div className="e-card playing">
-                      <div className="image">
-                        <img
-                          src={service.image}
-                          alt={service.alt}
-                          className="service-image"
-                        />
-                      </div>
-                      <div className="infotop">{service.title}</div>
-                    </div>
+                {services.map((service) => (
+                  <div key={service.id} className="service">
+                    <h3>{service.title}</h3>
+                    <img src={service.image} alt={service.alt} />
+                    <p>{service.description}</p>
+                    <Link to={`/services/${service.title.replace(/\s+/g, "")}`}>
+                      Learn More
+                    </Link>
                   </div>
                 ))}
               </Carousel>
@@ -65,3 +57,5 @@ export const Services = () => {
     </section>
   );
 };
+
+export default Services;
