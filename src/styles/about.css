@@ -75,6 +75,24 @@
     animation-duration: 1s;
     animation-fill-mode: both;
 }
+/* Apply the main theme color to the Nav background */
+.nav-pills {
+  background-color: #0d0325;
+}
+
+/* Change the default color of the Nav items (links) */
+.nav-pills .nav-link {
+  color: #fbf9ff; /* This is the lighter color you provided for text */
+  background-color: #27096d; /* Secondary theme color for background */
+}
+
+/* Change the color of the Nav item for the active state */
+.nav-pills .nav-link.active,
+.nav-pills .nav-link:focus,
+.nav-pills .nav-link:hover {
+  color: #0d0325; /* Dark theme color for text */
+  background-color: #a183e7; /* Highlight color for background */
+}
 
 /* Media queries for responsiveness */
 

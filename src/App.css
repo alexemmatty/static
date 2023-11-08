@@ -4,11 +4,13 @@
   src: url('./assets/font/CentraNo2-Bold.ttf');
   font-weight: 700;
 }
+
 @font-face {
   font-family: Centra;
   src: url('./assets/font/CentraNo2-Medium.ttf');
   font-weight: 500;
 }
+
 @font-face {
   font-family: Centra;
   src: url('./assets/font/CentraNo2-Book.ttf');
@@ -36,13 +38,22 @@ body {
   font-family: 'Centra', sans-serif !important;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   padding: 0;
   line-height: normal;
 }
 
-p, a, li, button, ul {
+p,
+a,
+li,
+button,
+ul {
   margin: 0;
   padding: 0;
   line-height: normal;
@@ -63,23 +74,25 @@ button {
   background-color: transparent;
 }
 
-input:focus, textarea:focus, select:focus {
+input:focus,
+textarea:focus,
+select:focus {
   outline: none;
 }
 
 @media (min-width:1700px) {
-	main .container {
-		max-width: 100%;
-		padding: 0 150px;
-	}
+  main .container {
+    max-width: 100%;
+    padding: 0 150px;
+  }
 }
 
 p.success {
-	color: green;
+  color: green;
 }
 
 p.danger {
-	color: red;
+  color: red;
 }
 
 
@@ -89,18 +102,38 @@ p.danger {
 .brand-name {
   font-family: 'Poppins', sans-serif;
   color: white;
-  font-weight: 700; /* This makes the font bold */
+  font-weight: 700;
+  /* This makes the font bold */
   /* Additional styling can go here */
-  letter-spacing: 2.5px; /* This adds 50 pixels of spacing between each letter */
+  letter-spacing: 2.5px;
+  /* This adds 50 pixels of spacing between each letter */
 
 }
 
 .brand-name .brand-x {
-  display: inline-block; /* This allows the rotation to happen on the inline element */
+  display: inline-block;
+  /* This allows the rotation to happen on the inline element */
   transition: transform 0.6s ease-in-out;
   /* Additional styling for the 'X' can go here */
 }
 
 .brand-name .brand-x:hover {
-  transform: rotate(360deg); /* This rotates the 'X' on hover */
+  transform: rotate(360deg);
+}
+
+
+@media (max-width: 768px) {
+  .Banner{
+    min-height: 100vh;
+  }
+  .App>* {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .App>.exclude-fullscreen {
+    min-height: auto;
+  }
 }
