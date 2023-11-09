@@ -7,7 +7,7 @@ import services from "../data/services";
 import "../styles/service.css";
 function Projects() {
   return (
-    <section className="project" id="projects">
+    <section className="project" id="Service">
       <Container>
         <Row>
           <Col size={12}>

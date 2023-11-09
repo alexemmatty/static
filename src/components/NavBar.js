@@ -47,7 +47,7 @@ function NavBar() {
             <Nav className="ms-auto">
               <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
               <Nav.Link href="#about" className={activeLink === 'about' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('about')}>About US</Nav.Link>
-              <Nav.Link href="#service" className={activeLink === 'service' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('service')}>Our Services</Nav.Link>
+              <Nav.Link href="#Service" className={activeLink === 'Service' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('Service')}>Our Services</Nav.Link>
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
