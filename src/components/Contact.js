@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
-import contactImg from "../assets/img/header-img.png";
+import contactImg from "../assets/img/contact.png";
 import "../styles/contact.css";
 
 function Contact() {
@@ -18,6 +18,9 @@ function Contact() {
   const [formDetails, setFormDetails] = useState(formInitialDetails);
   const [buttonText, setButtonText] = useState("Send");
   const [status, setStatus] = useState({});
+  const isFormIncomplete = Object.values(formDetails).some((value) => value === '');
+
+  
 
   const onFormUpdate = (category, value) => {
     setFormDetails({
@@ -28,18 +31,29 @@ function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    let buttonTextCycle = ["Sending", "Sending.", "Sending..", "Sending..."];
+    let cycleIndex = 0;
+  
+    // Start the sending text cycle
+    const cycleButtonText = () => {
+      setButtonText(buttonTextCycle[cycleIndex]);
+      cycleIndex = (cycleIndex + 1) % buttonTextCycle.length;
+    };
+  
+    const buttonTextInterval = setInterval(cycleButtonText, 100);
     setButtonText("Sending...");
-
+  
     try {
       const db = getFirestore();
-      // Changed 'contacts' to 'Contact' to match your Firestore collection name
       const docRef = await addDoc(collection(db, "Contact"), formDetails);
-
+  
+      clearInterval(buttonTextInterval); // Stop the sending text cycle
       setButtonText("Send");
       setFormDetails(formInitialDetails);
       setStatus({ success: true, message: "Message sent successfully." });
     } catch (error) {
       console.error("Error adding document: ", error);
+      clearInterval(buttonTextInterval); // Stop the sending text cycle
       setButtonText("Send");
       setStatus({
         success: false,
@@ -47,6 +61,7 @@ function Contact() {
       });
     }
   };
+  
 
   return (
     <section className="contact" id="connect">
@@ -57,7 +72,7 @@ function Contact() {
               {({ isVisible }) => (
                 <img
                   className={`${
-                    isVisible ? "animate__animated animate__zoomIn" : ""
+                    isVisible ? "" : ""
                   } d-none d-md-block`}
                   src={contactImg}
                   alt="Contact Us"
@@ -109,10 +124,11 @@ function Contact() {
                     <textarea
                       rows="6"
                       value={formDetails.message}
+                      
                       placeholder="Message"
-                      onChange={(e) => onFormUpdate("message", e.target.value)}
+                    onChange={(e) => onFormUpdate("message", e.target.value)}
                     ></textarea>
-                    <button type="submit">
+                  <button type="submit" disabled={isFormIncomplete}>
                       <span>{buttonText}</span>
                     </button>
                   </Col>

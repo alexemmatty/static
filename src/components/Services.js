@@ -1,11 +1,11 @@
 import { Container, Row, Col} from "react-bootstrap";
-import { ProjectCard } from "./Card";
+import { Card } from "./Card";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import services from "../data/services";
 import "../styles/service.css";
-function Projects() {
+function Services() {
   return (
     <section className="project" id="Service">
       <Container>
@@ -15,12 +15,11 @@ function Projects() {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
                 <h2>Our Services</h2>
-                <p>Our humbled services include the following </p>
-                      <Row >
+                      <Row className="i" >
                         {
                           services.map((project, index) => {
                             return (
-                              <ProjectCard
+                              <Card
                                 key={index}
                                 {...project}
                                 />
@@ -38,4 +37,4 @@ function Projects() {
   )
 }
 
-export default Projects;
+export default Services;

@@ -1,5 +1,3 @@
-/* Default styles for larger screens */
-
 .img-fluid {
     max-width: 100%;
     height: auto;
@@ -7,132 +5,79 @@
 
 .about-section {
     position: relative;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding: 5rem 0;
+    background: #fbf9ff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-.services-section {
-    position: relative;
-    z-index: 10;
-    margin-bottom: -50%;
-}
 
 .text-part h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: 700;
-    margin-bottom: 1rem;
-    padding-left: 45px;
+    margin-bottom: 2rem;
+    color: #0d0325;
+    text-align: center;
+    position: relative;
 }
 
-.single-line-heading {
-    white-space: nowrap;
+.text-part h1:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 4px;
+    background: #a183e7;
+    border-radius: 2px;
 }
 
 .text-part .highlight {
-    color: #a183e7;
-}
-
-.text-part .list {
-    padding-top: 30px;
-    padding-right: 20px;
-}
-
-.text-part .text-left1 {
-    text-align: center;
-}
-
-.text-part .text-left2 {
-    text-align: center;
-}
-
-.text-part .text-left3 {
-    text-align: center;
-}
-
-.text-part .padding1 {
-    padding-left: 72.5px;
-}
-
-.text-part .padding2 {
-    padding-left: 85px;
-}
-
-.text-part .padding3 {
-    padding-left: 91px;
+    color: #5e60ce;
+    font-weight: 700;
 }
 
 .text-part .description {
     font-size: 1.25rem;
-    color: #ffffff;
-    line-height: 1.5;
+    color: #0d0325;
+    line-height: 1.75;
+    margin-bottom: 3rem;
 }
 
-.image-part {
-    text-align: center;
-}
-
-.animate__zoomIn {
-    animation-duration: 1s;
-    animation-fill-mode: both;
-}
-/* Apply the main theme color to the Nav background */
-.nav-pills {
-  background-color: #0d0325;
-}
-
-/* Change the default color of the Nav items (links) */
 .nav-pills .nav-link {
-  color: #fbf9ff; /* This is the lighter color you provided for text */
-  background-color: #27096d; /* Secondary theme color for background */
+    color: #0d0325;
+    background-color: transparent;
+    border-radius:#0d0325 solid 5px;
+    margin: 0 5px;
+    transition: all 0.3s ease;
 }
 
-/* Change the color of the Nav item for the active state */
 .nav-pills .nav-link.active,
 .nav-pills .nav-link:focus,
 .nav-pills .nav-link:hover {
-  color: #0d0325; /* Dark theme color for text */
-  background-color: #a183e7; /* Highlight color for background */
+    color: #0d0325;
+    background-color: #a183e7;
 }
 
-/* Media queries for responsiveness */
 
+/* Responsive Media queries */
 @media (max-width: 768px) {
-    /* Adjust styles for screens up to 768px wide */
-    
-
     .text-part h1 {
-        font-size: 3rem; /* Reduce font size for smaller screens */
-        padding-left: 20px; /* Adjust padding */
+        font-size: 2.5rem;
     }
 
     .text-part .description {
-        font-size: 1rem; /* Smaller font size for description */
-    }
-    .text-part .padding1 {
-        padding-left: 165px; /* Center the text on mobile view */
-    }
-    .text-part .padding2 {
-        padding-left: 175px; /* Center the text on mobile view */
-    }
-    .text-part .padding3 {
-        padding-left: 182px; /* Center the text on mobile view */
+        font-size: 1.15rem;
     }
 }
 
 @media (max-width: 576px) {
-    /* Adjust styles for screens up to 576px wide */
-
     .text-part h1 {
-        font-size: 2rem; /* Further reduce font size for smaller screens */
-        padding-left: 40px; /* Adjust padding */
+        font-size: 2rem;
     }
 
     .text-part .description {
-        font-size: 0.9rem; /* Smaller font size for description */
+        font-size: 1rem;
     }
-    .text-part .description {
-        font-size: 1rem; /* Smaller font size for description */
-    }
-
-    /* You can add more specific adjustments for smaller screens here */
 }

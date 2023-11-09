@@ -1,7 +1,8 @@
- import web from '../assets/img/website.png';
- import bd from '../assets/img/bd.png';
- import design from '../assets/img/design.png';
- import social from '../assets/img/social.png';
+ import web from '../assets/img/web.svg';
+ import seo from '../assets/img/seo.svg';
+ import design from '../assets/img/graphics.svg';
+ import social from '../assets/img/social.svg';
+ import branding from '../assets/img/branding.svg';
  const services = [
     {
       "id": 1,
@@ -9,12 +10,12 @@
       "image": web,
       "alt": "WebDevelopment",
       "description": "We are a team",
-      "redirect": `/ServiceDetail/WebDevelopment`
+      "redirect": `/ServiceDetail/Web`
     },
     {
       "id": 2,
       "title": "Business Development",
-      "image": bd,
+      "image": seo,
       "alt": "Branding",
       "description": "We are a team",
       "redirect": "https://www.google.com"
@@ -32,6 +33,14 @@
       "title": "Social Media Marketing",
       "image": social,
       "alt": "Social Media Marketing",
+      "description": "We are a team",
+      "redirect": "https://www.google.com"
+    },
+    {
+      "id": 5,
+      "title": "Branding",
+      "image": branding,
+      "alt": "Branding",
       "description": "We are a team",
       "redirect": "https://www.google.com"
     }

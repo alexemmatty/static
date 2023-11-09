@@ -33,7 +33,7 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
-  background-color: #0d0325 !important;
+  background-color: #27096d !important;
   color: #fbf9ff !important;
   font-family: 'Centra', sans-serif !important;
 }
@@ -136,4 +136,8 @@ p.danger {
   .App>.exclude-fullscreen {
     min-height: auto;
   }
+}
+
+.Services {
+  border: #fbf9ff 1px solid;
 }
