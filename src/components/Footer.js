@@ -10,20 +10,23 @@ function Footer() {
     <footer className="footer">
       <Container>
         <Row className="align-items-center justify-content-center text-center">
-          {/* <Col xs={12} sm={5} className="mb-3 mb-sm-0">
-            <img src={logo} alt="Logo" />
-          </Col> */}
-          <Col xs={12} sm={3} className="mb-3 mb-sm-0">
-  <p>Copyright © {new Date().getFullYear()}. All Rights Reserved</p>
-</Col>
-
-          {/* <Col xs={12} sm={4} className="mb-3 mb-sm-0">
-            <div className="social-icon">
-              <a href="#"><img src={navIcon1} alt="Icon" /></a>
-              <a href="https://www.facebook.com/Nxtep.in/"><img src={navIcon2} alt="Icon" /></a>
-              <a href="https://www.instagram.com/nxtep.in/"><img src={navIcon3} alt="Icon" /></a>
-            </div>
-          </Col> */}
+          <Col xs={12} sm={6} md={4} className="mb-3 mb-sm-0">
+            <h4>Contact Us</h4>
+            <p>Phone: +91 8289819891</p>
+          </Col>
+          <Col xs={12} sm={6} md={4} className="mb-3 mb-sm-0">
+            {/* Replace "Visit Us" with a logo */}
+            <h2 className="brand-name">n<span>X</span>tep</h2>
+          </Col>
+          <Col xs={12} sm={12} md={4} className="mb-3 mb-sm-0">
+            <h4>Mail Us</h4>
+            <p>nxtep.in@gmail.com</p>
+          </Col>
+        </Row>
+        <Row className="align-items-center justify-content-center text-center">
+          <Col xs={12} sm={12} className="mb-3 mb-sm-0">
+            <p>Copyright © {new Date().getFullYear()}. All Rights Reserved</p>
+          </Col>
         </Row>
       </Container>
     </footer>
