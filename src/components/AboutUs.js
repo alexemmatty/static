@@ -23,6 +23,16 @@ function About() {
   ];
 
   const [activeKey, setActiveKey] = useState(tabData[0].eventKey);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -33,7 +43,21 @@ function About() {
       });
     }, 5000); 
     return () => clearInterval(interval);
-  }, []);
+  }, [tabData]);
+
+  const renderTabContent = () => {
+    return tabData.map((tab) => (
+      <Tab.Pane eventKey={tab.eventKey} key={tab.eventKey} className={isMobile ? "mobile-tab-content" : ""}>
+        {isMobile ? (
+          <div className="message-style">
+            <p className="text-center text-dark"><span>{tab.title}</span> is to {tab.content}</p>
+          </div>
+        ) : (
+          <p className="text-center text-dark">{tab.content}</p>
+        )}
+      </Tab.Pane>
+    ));
+  };
 
   return (
     <section className="about-section" id="about">
@@ -55,25 +79,22 @@ function About() {
                   thrive in the online world.
                 </p>
                 <Tab.Container id="projects-tabs" activeKey={activeKey} onSelect={(k) => setActiveKey(k)}>
-                  <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center">
-                    {tabData.map((tab) => (
-                      <Nav.Item key={tab.eventKey}>
-                        <Nav.Link eventKey={tab.eventKey} className="nav-tab-link">
-                          {tab.title}
-                        </Nav.Link>
-                      </Nav.Item>
-                    ))}
-                  </Nav>
-
+                  {!isMobile && (
+                    <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center">
+                      {tabData.map((tab) => (
+                        <Nav.Item key={tab.eventKey}>
+                          <Nav.Link eventKey={tab.eventKey} className="nav-tab-link">
+                            {tab.title}
+                          </Nav.Link>
+                        </Nav.Item>
+                      ))}
+                    </Nav>
+                  )}
                   <Tab.Content
                     id="slideInUp"
                     className={isVisible ? "animate__animated animate__slideInUp" : ""}
                   >
-                    {tabData.map((tab) => (
-                      <Tab.Pane eventKey={tab.eventKey} key={tab.eventKey}>
-                        <p className="text-center text-dark" >{tab.content}</p>
-                      </Tab.Pane>
-                    ))}
+                    {renderTabContent()}
                   </Tab.Content>
                 </Tab.Container>
               </Col>
