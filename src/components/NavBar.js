@@ -51,9 +51,15 @@ function NavBar() {
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-                <a href="#"><img src={navIcon1} alt="" /></a>
-                <a href="https://www.facebook.com/Nxtep.in/"><img src={navIcon2} alt="Icon" /></a>
-                <a href="https://www.instagram.com/nxtep.in/"><img src={navIcon3} alt="Icon" /></a>
+                <a href="https://www.linkedin.com/company/nxtep.in" target="_blank" rel="noopener noreferrer">
+                  <img src={navIcon1} alt="LinkedIn" />
+                </a>
+                <a href="https://www.facebook.com/Nxtep.in/" target="_blank" rel="noopener noreferrer">
+                  <img src={navIcon2} alt="Icon" />
+                </a>
+                <a href="https://www.instagram.com/nxtep.in/" target="_blank" rel="noopener noreferrer">
+                  <img src={navIcon3} alt="Icon" />
+                </a>
               </div>
               <HashLink to='#connect'>
                 <button className="vvd"><span>Get in touch</span></button>

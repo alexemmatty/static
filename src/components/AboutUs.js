@@ -55,18 +55,15 @@ function About() {
                   thrive in the online world.
                 </p>
                 <Tab.Container id="projects-tabs" activeKey={activeKey} onSelect={(k) => setActiveKey(k)}>
-<Nav
-  variant="pills"
-  className="nav-pills mb-5 justify-content-center align-items-center"
->
-  {tabData.map((tab) => (
-    <Nav.Item key={tab.eventKey}>
-      <Nav.Link eventKey={tab.eventKey}>
-        {tab.title}
-      </Nav.Link>
-    </Nav.Item>
-  ))}
-</Nav>
+                  <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center">
+                    {tabData.map((tab) => (
+                      <Nav.Item key={tab.eventKey}>
+                        <Nav.Link eventKey={tab.eventKey} className="nav-tab-link">
+                          {tab.title}
+                        </Nav.Link>
+                      </Nav.Item>
+                    ))}
+                  </Nav>
 
                   <Tab.Content
                     id="slideInUp"

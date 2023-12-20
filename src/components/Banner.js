@@ -11,17 +11,37 @@ function Banner() {
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
-  const [index, setIndex] = useState(1);
-  const toRotate = [
-    "Web Developer",
-    "Branding",
-    "Social Media",
-    "Web Designer",
-    "UI/UX Designer",
-  ];
-  const period = 1000;
+  
+  const period = 2000; 
 
   useEffect(() => {
+    const toRotate = [
+      "Web Developer",
+      "Branding",
+      "Social Media",
+      "Web Designer",
+      "UI/UX Designer",
+    ];
+    const tick = () => {
+      let i = loopNum % toRotate.length;
+      let fullText = toRotate[i];
+      let updatedText = isDeleting
+        ? fullText.substring(0, text.length - 1)
+        : fullText.substring(0, text.length + 1);
+
+      setText(updatedText);
+
+      if (!isDeleting && updatedText === fullText) {
+        setTimeout(() => setIsDeleting(true), period);
+      } else if (isDeleting && updatedText === "") {
+        setIsDeleting(false);
+        setLoopNum(loopNum + 1);
+        setDelta(300 - Math.random() * 100); // Speed for typing next word
+      } else {
+        setDelta(isDeleting ? 100 : 200); // Speed for typing and deleting
+      }
+    };
+
     let ticker = setInterval(() => {
       tick();
     }, delta);
@@ -29,56 +49,20 @@ function Banner() {
     return () => {
       clearInterval(ticker);
     };
-  }, [text]);
-
-  const tick = () => {
-    let i = loopNum % toRotate.length;
-    let fullText = toRotate[i];
-    let updatedText = isDeleting
-      ? fullText.substring(0, text.length - 1)
-      : fullText.substring(0, text.length + 1);
-
-    setText(updatedText);
-
-    if (isDeleting) {
-      setDelta((prevDelta) => prevDelta / 2);
-    }
-
-    if (!isDeleting && updatedText === fullText) {
-      setIsDeleting(true);
-      setIndex((prevIndex) => prevIndex - 1);
-      setDelta(period);
-    } else if (isDeleting && updatedText === "") {
-      setIsDeleting(false);
-      setLoopNum(loopNum + 1);
-      setIndex(1);
-      setDelta(500);
-    } else {
-      setIndex((prevIndex) => prevIndex + 1);
-    }
-  };
+  }, [text, delta, loopNum, isDeleting]);
 
   return (
     <section className="banner" id="home">
       <Container>
         <Row className="aligh-items-center">
           <Col xs={12} md={6} xl={7}>
-            {/* TrackVisibility for the content */}
             <TrackVisibility>
               {({ isVisible }) => (
-                <div
-                  className={
-                    isVisible ? "animate__animated animate__fadeIn" : ""
-                  }
-                >
+                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                   <span className="tagline">Next step for your brands </span>
                   <h1>
-                    {`Hi! We're Nxtep, your creative nexus for `}{" "}
-                    <span
-                      className="txt-rotate"
-                      dataPeriod="1000"
-                      data-rotate='[ "Web Developer", "Branding", "Social Media","Web Designer", "UI/UX Designer" ]'
-                    >
+                    {`Hi! We're Nxtep, your creative nexus for `}
+                    <span className="txt-rotate" dataPeriod="1000" data-rotate='["Web Developer", "Branding", "Social Media", "Web Designer", "UI/UX Designer"]'>
                       <span className="wrap">{text}</span>
                     </span>
                   </h1>
@@ -86,21 +70,16 @@ function Banner() {
                     <button>
                       Let’s Connect <ArrowRightCircle size={25} />
                     </button>
-                  </a>{" "}
+                  </a>
                 </div>
               )}
             </TrackVisibility>
           </Col>
           <Col xs={12} md={6} xl={5}>
-            {/* Conditional rendering of TrackVisibility for the image */}
             {window.innerWidth >= 768 && (
               <TrackVisibility>
                 {({ isVisible }) => (
-                  <div
-                    className={
-                      isVisible ? "animate__animated animate__zoomIn" : ""
-                    }
-                  >
+                  <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
                     <img src={headerImg} alt="Header Img" />
                   </div>
                 )}
